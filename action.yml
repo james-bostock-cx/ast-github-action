@@ -14,6 +14,9 @@ inputs:
   cx_client_secret:
     required: true
     description: 'Secret key for AST portal authentication'
+  src:
+    required: true
+    description: 'The source folder in this repository to scan'
   project_name:
     required: false
     default: ${{ github.repository }} # default repo name
@@ -72,6 +75,7 @@ runs:
     CX_CLIENT_SECRET: ${{ inputs.cx_client_secret }}
     GITHUB_TOKEN: ${{ inputs.github_token }}
     BRANCH: ${{ inputs.branch }}
+    SRC: ${{ inputs.src }}
     PROJECT_NAME: ${{ inputs.project_name }}
     ADDITIONAL_PARAMS: ${{ inputs.additional_params }}
     REPO_NAME: ${{ inputs.repo_name }}
