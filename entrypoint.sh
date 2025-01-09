@@ -1,6 +1,4 @@
 #!/bin/bash
-env | sort
-set -x
 
 output_file=./output.log
 
